@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <!-- KIỂU DỮ LIỆU VÀ TOÁN TỬ -->
+<!--  
+ 
+     Biến là gì?
+     - Đại diện - địa chỉ ô nhớ chứa dữ liệu.
+     - Biến - Thay đổi được giá trị trong ô nhớ chứa dữ liệu.
+     - Hằng - Không thay đổi được giá trị trong ô nhớ.
+     Tại sao phải dùng biến?
+     -
+    Các cách nhúng JS vào HTMl 
+    - Nhúng file JS bên ngoài vào <script src="đường dẫn file"></script>
+    - Mở thẻ  <script></script> và code vào bên trong đó
+    Quy ước đặt tên biến
+    - Coding Convention
+        - camel: lạc đà - chữ cái đầu viết thường - Các từ sau chữ cái đầu viết hoa - VD:dayOfMonth.
+        - snake: con rắn - thêm shift '-' vào giữa các từ - VD: day_of_month.
+        - biến thường dùng camel.
+        - hằng dùng snake.
+    JS là ngôn ngữ kiểu động - dễ dãi.
+    Có 8 kiểu dữ liệu
+    - Number:
+        - int: Số nguyên
+        - float: số thực
+    - String: chuỗi - gồm nhiều kí tự
+        - Nhận diện: '', " ", ``.
+        - Tất cả dữ liệu người dùng nhập vào đều là string
+    - Boolean: True/False 
+    TOÁN TỬ
+        - Toán tử số học: '+', '-','*','/',%
+            VD: a + b => +: toán tử, 'a,b': toán hạng
+        -Toán tử gán: '='
+            VD:  c = a + b;
+        - Toán tử so sánh: >, < , >=, <=, (==: so sánh giạ trị), (===: so sánh giá trị và so sánh cả kiểu dữ liệu), !=, !==                     
+        - Toán tử cộng chuỗi: nối chuỗi
+        ép kiểu: đổi chuối thành số  
+            - parseInt: đưa về số nguyên
+            - parseFloat: đưa về số thực 
+            - Number: đưa về số
+--> 
+
+<script>
+    function tinhDiem3Mon() {
+        let diemToan = +prompt("nhập điểm toán")  // let: khai báo biến
+        diemToan = parseInt(diemToan) 
+        diemToan = parseFloat(diemToan) 
+        const diemVan = 9 // const: khai báo hằng
+        let diemAnh = 6
+        
+    
+        let tongDiem = 2 * (diemToan + diemVan) + diemAnh
+        if(tongDiem >= 30){
+            alert("Đỗ nhé bé <3")
+        }else{
+            alert("Trượt rồi, bạn ngu vl")
+        }
+    }
+    
+    tinhDiem3Mon()
+    </script>
+</body>
+</html>
+
+
+

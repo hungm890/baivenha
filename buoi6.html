@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #btn-game{
+        position: absolute ;
+        left: 100px;
+        top: 100px;
+        width: 50px;
+        height: 50px;
+    }
+</style>
+<body>
+
+    <img src="/319090027_116779307781926_7052656182544745528_n.jpg" alt="" id="btn-game" onmouseover="changePos()">
+    <p id="demo" onmouseover="check()" onmouseout="checkOut()">Đây là demo</p>
+    <hr>
+    <input type="text" placeholder="Hãy nhập gì đó" id="anyInput" onchange="checkInput()">
+    <script>
+    function checkInput(){
+            let a = document.getElementById("anyInput").value;
+            console.log(a);
+                }
+        setInterval(changePos, 1000)
+        function changePos(){
+            Math.random()*10
+            let left = Math.floor(Math.random() * window.innerWidth - 200);
+            let top = Math.floor(Math.random() * window.innerHeight -200);
+
+
+            document.getElementById("btn-game").style.left = left + "px";
+            document.getElementById("btn-game").style.top = top + "px";
+
+        }
+        // let a = document.getElementById("demo");
+        // console.log(a);
+        function check(){
+            document.getElementById("demo").style.color = "yellow"
+            document.getElementById("demo").style.color = "pointer"
+        }
+        function checkOut(){
+            document.getElementById("demo").style.color = "green"
+            document.getElementById("demo").style.color = "pointer"
+        }
+        window.addEventListener("keydown" )
+    </script>
+</body>
+</html>
