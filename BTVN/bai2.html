@@ -7,14 +7,47 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>HTML: HyperText Markup Language</h1>
-    <p>Tim Berners-Lee invented the first browser at CERN, 
-        to enable researchers to share their research with eachother.</p>
-        <a target="_blank" href="http://home.web.cern.ch/topics/birth-web">Read more about the history of HTML
-            <p>
-            <img src="https://www.kasandbox.org/programming-images/misc/tim-berners-lee-webpage.png" width="300">
-            <br/>Image courtesy CERN   
-            </p>           
-    </a>   
+    <label for="birthDate">Ngày sinh:</label>
+    <input type="date" id="birthDate">
+
+    <label for="toDay">Nhập ngày cần tính</label>
+    <input type="date" id="toDay">
+
+    <button onclick="calculateAge()">Tính tuổi</button>
+
+    <p>Tuổi của bạn là: <span id="result"></span></p>
+
+<script>
+    function calculateAge() {
+        const a = new Date(document.getElementById("birthDate").value);
+
+        const b = new Date();
+
+        const yearDiff = b.getFullYear() - a.getFullYear(); 
+        const monthDiff = b.getMonth() - a.getMonth(); 
+        const dayDiff = b.getDate() - a.getDate();
+
+        let ageYear = yearDiff;
+        let ageMonth = monthDiff;
+        let ageDay = dayDiff;
+
+        if (ageDay < 0) {
+        ageMonth--;
+        const tempDate = new Date(today.getFullYear(), today.getMonth(), 0);
+        ageDay = tempDate.getDate() + dayDiff;
+        }
+
+        if (ageMonth < 0) {
+        ageYear--;
+        ageMonth = 12 + monthDiff;
+        }
+
+        result = ageYear + " tuổi " + ageMonth + " tháng " + ageDay + " ngày";
+
+
+        document.getElementById("result").innerText = result;
+    }
+</script>
+
 </body>
 </html>
